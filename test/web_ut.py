@@ -14,7 +14,8 @@ class ISelenium(unittest.TestCase):
     # 读入配置文件
     def get_config(self):
         config = configparser.ConfigParser()
-        config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
+        config.read(os.path.join('C:/python-system/iSelenium_Python1', 'iselenium.ini'))
+        #config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
         return config
 
     def tearDown(self):
@@ -22,7 +23,6 @@ class ISelenium(unittest.TestCase):
 
     def setUp(self):
         config = self.get_config()
-
         # 控制是否采用无界面形式运行自动化测试
         try:
             using_headless = os.environ["using_headless"]
@@ -40,7 +40,7 @@ class ISelenium(unittest.TestCase):
         self.driver = webdriver.Chrome(executable_path=config.get('driver', 'chrome_driver'),
                                        options=chrome_options)
 
-    @allure.story('Test key word 今日头条')
+    # @allure.story('Test key word 今日头条')
     def test_webui_1(self):
         """ 测试用例1，验证'今日头条'关键词在百度上的搜索结果
         """
