@@ -6,7 +6,9 @@
 - git
 
 配置文件：iselenium.ini
-- 将配置文件复制到本地磁盘的[user.home]目录
+- 将配置文件复制到本地磁盘的[user.home]目录 
+  
+  * 可直接写 配置文件.ini的绝对路径（需要去掉os.environ）
 - 填入设备的chromwebdriver文件的全路径
 
 运行命令：

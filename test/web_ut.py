@@ -52,7 +52,7 @@ class ISelenium(unittest.TestCase):
         """ 测试用例2， 验证'王者荣耀'关键词在百度上的搜索结果
         """
 
-        self._test_baidu('王者荣耀', 'test_webui_2')
+        self._test_baidu('袁隆平院士', 'test_webui_2')
 
     def _test_baidu(self, search_keyword, testcase_name):
         """ 测试百度搜索子函数
