@@ -47,9 +47,9 @@ class ContactListPage(BasePage):
         time.sleep(3)
         return self
 
-    def click_contact(self):
-        # self.webdriverwait(MobileBy.XPATH, "//*[contains(@text,'冰墩墩')]")
-        elelist = self.driver.find_elements_by_xpath("//*[contains(@text,'冰墩墩')]")
+    def click_contact(self,name):
+        # 定位参数化，需要在函数中定义参数，调用时带入参数
+        elelist = self.driver.find_elements_by_xpath(f"//*[contains(@text,'{name}')]")
 
         if len(elelist) < 2:
             print("没有找到联系人")

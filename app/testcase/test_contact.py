@@ -46,7 +46,8 @@ class TestContact():
     @pytest.mark.parametrize('name', data_del)
     def test_deletecontact(self,name):
         mypage_dele = self.main.goto_contactListPage().search_contact().\
-            send_contact(name).click_contact().delinfo().editinfo().delelement().delconfirm()
+            send_contact(name).click_contact(name).delinfo().editinfo().delelement().delconfirm()
+       # 未判断 断言，断言逻辑 len(elelist1) - 1 == len(elelist2)
 
 
 
